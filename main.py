@@ -1,11 +1,10 @@
+from db import create_tables
 from library import Library
 from models import Book, Member
 
 #Create a main program that demonstrates the functionalities of the library system
 #main program
-from models import Member
-from library import Library
-
+create_tables()
 library = Library()
 
 def menu():
@@ -16,7 +15,8 @@ def menu():
     print("4. Return Book")
     print("5. View All Books")
     print("6. View All Members")
-    print("7. Exit")
+    print("7. Delete member")
+    print("8. Exit")
 
 while True:
     menu()
@@ -32,7 +32,7 @@ while True:
     elif choice == "2":
         name = input("Enter member name: ")
         member_id = input("Enter member ID: ")
-        member = Member(name, member_id)
+        member = Member(member_id, name)  # Make sure order matches your Member class
         library.register_member(member)
 
     elif choice == "3":
@@ -47,17 +47,29 @@ while True:
 
     elif choice == "5":
         print("\nBooks in Library:")
-        for book in library.books:
-            print(book)
+        books = library.get_all_books()  # ✅ Database method
+        if not books:  # ✅ Indented under the elif
+            print("No books in library.")
+        else:
+            for book in books:
+                print(book)
 
     elif choice == "6":
         print("\nMembers:")
-        for member in library.members:
-            print(member)
-
+        members = library.get_all_members()  # ✅ Database method
+        if not members:  # ✅ Indented under the elif
+            print("No members registered to library.")
+        else:
+            for member in members:
+                print(member)
     elif choice == "7":
+        member_id = input("Enter member ID to delete: ")
+        library.delete_member(member_id)            
+
+    elif choice == "8":
         print("Goodbye!")
         break
 
     else:
         print("Invalid choice. Try again.")
+

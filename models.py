@@ -35,10 +35,10 @@ class Book:
 class Member:
     MAX_BORROW_LIMIT = 3
     
-    def __init__(self, name, member_id,):
+    def __init__(self, member_id, name, borrowed_books=None):
+        self.member_id = member_id 
         self.name = name
-        self.member_id = member_id
-        self.borrowed_books = []  #create a new list for each memeber to store borrowed books
+        self.borrowed_books = borrowed_books if borrowed_books else []  #create a new list for each memeber to store borrowed books
     #helper method to check if member can borrow more books
     def can_borrow(self):
         return len(self.borrowed_books) < self.MAX_BORROW_LIMIT #limit is 3 books
