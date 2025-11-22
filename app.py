@@ -8,6 +8,7 @@ library = Library()  # Your existing Library class
 # -------------------- Main Window --------------------
 root = tk.Tk()
 root.title("Library Management System")
+root.configure(bg="#add8e6") 
 root.geometry("600x400")
 
 # -------------------- Helper Functions --------------------
