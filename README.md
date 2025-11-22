@@ -188,5 +188,5 @@ This project is MIT licensed.
 Eunice Nyaboke
 
 GitHub: @nyaboke-Dev1
-LinkedIn: Euice Nyaboke Onkundi
+LinkedIn: Eunice Nyaboke Onkundi
 Email: enyaboke399@gmail.com
