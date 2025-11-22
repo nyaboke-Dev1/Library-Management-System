@@ -1,7 +1,7 @@
 # Library class
 import json
 from book import Book
-from member import Member
+from models import Member
  
 class Library:
     def __init__(self):

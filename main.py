@@ -1,11 +1,9 @@
 from library import Library
-from book import Book
-from member import Member
+from models import Book, Member
 
 #Create a main program that demonstrates the functionalities of the library system
 #main program
-from book import Book
-from member import Member
+from models import Member
 from library import Library
 
 library = Library()
