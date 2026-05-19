@@ -1,4 +1,5 @@
 📚 Library Management System
+
 A comprehensive Python-based library management system that enables efficient management of books, members, and borrowing transactions. This project demonstrates proficiency in Object-Oriented Programming (OOP), data persistence, and database integration.
 🎯 Project Overview
 This Library Management System is designed to handle core library operations including book cataloging, member registration, borrowing and returning books, and generating various reports. The system supports both file-based storage and MySQL database integration for robust data management.
